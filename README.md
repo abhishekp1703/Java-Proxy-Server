@@ -1,30 +1,87 @@
-# Java Multithreaded Proxy Server
+# 🚀 Java Multithreaded Proxy Server
 
-A robust Java proxy server that efficiently handles over 500 concurrent requests per second. Features LRU in-memory caching, request filtering, rate limiting, and Java logging for improved performance and security.
+![Java](https://img.shields.io/badge/Java-11%2B-orange)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
+![MIT License](https://img.shields.io/badge/license-MIT-blue)
 
-## Features
+A high-performance, scalable proxy server with:
+- 🔹 LRU caching (%75 cache hit rate)
+- 🔹 Multithreaded architecture (Handles 500+ concurrent requests/sec)
+- 🔹 Request filtering & rate limiting
+- 🔹 Java logging for monitoring and debugging
 
-- Multithreaded: High concurrency support
-- LRU Cache: 75% cache hit rate, 30% faster responses
-- In-memory caching: Reduces redundant backend requests
-- Request Filtering: Block unsafe or unwanted domains/URLs
-- Rate Limiting: Prevents abuse by limiting requests per client
-- Logging: Tracks activity for debugging and audits
 
-## Getting Started
+## 📦 Project Structure
 
-See [INSTRUCTIONS.md](INSTRUCTIONS.md) for setup and run steps.
+📂 JavaProxyServer
+├── ProxyServer.java
+├── ProxyWorker.java
+├── LRUCache.java
+├── RateLimiter.java
+├── README.md
+├── INSTRUCTIONS.md
+└── .gitignore
 
-## Project Structure
+## 🎉 Features
 
-- ProxyServer.java
-- ProxyWorker.java
-- LRUCache.java
-- RateLimiter.java
-- README.md
-- INSTRUCTIONS.md
-- .gitignore
+| Feature                | Description                                                         |
+|------------------------|---------------------------------------------------------------------|
+| 🚦 Multithreaded       | Efficient request handling via thread pool                          |
+| 🔄 LRU Cache           | Fast in-memory caching; improves response time by 30%               |
+| ✅ Filter & Limiting   | Blocks unsafe requests, limits client abuse                         |
+| 📈 Logging             | Tracks server activity for debugging and monitoring                 |
 
-## License
+---
 
-MIT License
+## 🛠️ Setup & Usage
+
+### 1. Clone/Download the Project
+
+git clone https://github.com/abhishekp1703/JavaProxyServer.git
+cd JavaProxyServer
+
+
+### 2. Compile All Java Files
+
+javac *.java
+
+
+### 3. Run the Proxy Server
+
+java ProxyServer
+
+
+Server runs on `localhost:8080` by default.
+
+---
+
+## 🧑‍💻 Demo
+
+- **Configure your browser/tool:**  
+  Use `localhost:8080` as your HTTP proxy.
+- **Make requests:**  
+  See terminal logs for cache hits, rate limits, and filter activity.
+
+---
+
+## 📝 Example Logs
+
+INFO: Proxy server started on port 8080
+INFO: Cache HIT for: http://example.com/
+WARNING: Blocked URL: http://blocked.com/
+WARNING: Rate limit exceeded for: 192.168.1.101
+
+
+---
+
+## 📚 Documentation
+
+- [INSTRUCTIONS.md](INSTRUCTIONS.md) – step-by-step setup and usage guide
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
